@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import NewPlace from "./places/pages/NewPlace";
+import UpdatePlace from "./places/pages/UpdatePlace";
 import UserPlaces from "./places/pages/UserPlaces";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
 
@@ -22,6 +23,9 @@ const App = () => {
           </Route>
           <Route path="/places/new" exact>
             <NewPlace />
+          </Route>
+          <Route path="/places/:placeId" exact>
+            <UpdatePlace />
           </Route>
           <Redirect to="/" />
         </Switch>
