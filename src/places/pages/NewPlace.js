@@ -5,7 +5,7 @@ import Input from "../../shared/components/FormElements/Input";
 import {
   VALIDATOR_MINLENGTH,
   VALIDATOR_REQUIRE,
-} from "../../shared/components/Util/validator";
+} from "../../shared/util/validators";
 import "./NewPlace.css";
 
 const formReducer = (state, action) => {
@@ -13,7 +13,6 @@ const formReducer = (state, action) => {
     case "INPUT_CHANGE":
       let formIsValid = true;
       for (const inputId in state.inputs) {
-        console.log(inputId);
         if (inputId === action.inputId) {
           formIsValid = formIsValid && action.isValid;
         } else {
