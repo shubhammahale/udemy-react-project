@@ -91,10 +91,10 @@ const Auth = () => {
         <Button type="submit" disabled={!formState.isValid}>
           {isLoginMode ? "LOGIN" : "SIGNUP"}
         </Button>
-        <Button inverse onClick={switchModehandler}>
-          SWITCH TO {isLoginMode ? "SIGNUP" : "LOGIN"}
-        </Button>
       </form>
+      <Button inverse onClick={switchModehandler}>
+        SWITCH TO {isLoginMode ? "SIGNUP" : "LOGIN"}
+      </Button>
     </Card>
   );
 };
